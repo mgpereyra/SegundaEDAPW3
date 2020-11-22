@@ -1,0 +1,22 @@
+﻿@model List<DAL.Jugador>
+@{
+    ViewBag.Title = "Lista de Jugadores";
+}
+<h2>Lista de Jugadores</h2>
+
+<table class="table">
+    <tr>
+        <th><h3>Id Jugador</h3></th>
+        <th><h3>Nombre</h3></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.idJugador)</td>
+            <td>@Html.DisplayFor(m => item.nombre)</td>
+        </tr>
+    }
+</table>
+
+<p><a href="AltaJugador" class="btn btn-primary btn-lg">Crear Nuevo Jugador</a></p>
+<p><a href=".." class="btn btn-primary btn-lg">Volver</a></p>

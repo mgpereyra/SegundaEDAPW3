@@ -1,0 +1,24 @@
+﻿@model List <DAL.GolesPorJugadorEquipo>
+@{
+    ViewBag.Title = "Lista de Goles Jugador";
+}
+<h2>Lista de Goles Jugador</h2>
+
+<table class="table">
+    <tr>
+        <th><h3>Equipo</h3></th>
+        <th><h3>Cantidad Goles</h3></th>
+        <th><h3>Jugador</h3></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(m => item.equipo)</td>
+        <td>@Html.DisplayFor(m => item.cantidadGoles)</td>
+        <td>@Html.DisplayFor(m => item.Jugador.nombre)</td>
+    </tr>
+    }
+</table>
+
+<p><a href="AltaGolesJugador" class="btn btn-primary btn-lg">Crear Nuevo Registro de Goles</a></p>
+<p><a href=".." class="btn btn-primary btn-lg">Volver</a></p>
